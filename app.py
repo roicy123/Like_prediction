@@ -33,8 +33,8 @@ def preprocess_input_for_regression(followers, comments, sentiment):
 st.title('Social Media Likes Prediction System')
 
 st.header('Input Features')
-followers = st.number_input('Followers', min_value=0, value=500)
-comments = st.number_input('Comments', min_value=0, value=100)
+followers = st.number_input('Followers', min_value=0, max_value=10000, value=500)
+comments = st.number_input('Comments', min_value=0, max_value=600, value=100)
 sentiment = st.selectbox('Sentiment', ['Positive', 'Neutral', 'Negative'])
 sentiment = 1 if sentiment == 'Positive' else -1 if sentiment == 'Negative' else 0
 
